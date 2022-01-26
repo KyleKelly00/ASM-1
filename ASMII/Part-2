@@ -1,0 +1,26 @@
+      
+    ORG    $1000
+
+START:   
+        LEA Health, A2
+        Trap #15
+        ADD  #5, A2
+        
+        SUB  #5, A2
+        
+        MOVE.L #2, D0
+        MOVE.L A2, D1
+        
+        MULU D0, D1
+        
+        DIVU D0, D1
+        
+        
+        
+        
+
+    SIMHALT 
+    
+Health dc.b $10
+
+    END    START      
