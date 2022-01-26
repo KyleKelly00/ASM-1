@@ -1,0 +1,25 @@
+
+    ORG    $1000
+START: 
+    LEA TEXT, A1    
+    MOVE #2, D0
+    TRAP #15
+    MOVE #5, D0
+    TRAP #15
+    MOVE #8, D0
+    TRAP #15
+    MOVE #11, D0
+    TRAP #15
+    MOVE #13, D0
+    TRAP #15
+    MOVE #17, D0
+    TRAP #15
+    MOVE #18, D0
+    TRAP #15
+    MOVE #21, D0
+    TRAP #15
+
+    SIMHALT  
+TEXT dc.b 'Hello',0   
+
+    END    START   
